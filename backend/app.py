@@ -17,7 +17,7 @@ engine = create_engine(DATABASE_URL, connect_args={"check_same_thread": False})
 Base = declarative_base()
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
-os.environ["OPENAI_API_KEY"]=
+# OPENAI_API_KEY is read from the environment
 client = OpenAI()
 
 # User Can ask his query here
